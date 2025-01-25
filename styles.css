@@ -1,0 +1,460 @@
+hr {
+	border-top: 5px solid #ffffff;
+  border-radius: 2px;
+}
+
+/*active*/
+.active {
+  font-weight: 500;
+  border:inset 0.5px rgba(0, 0, 0,1);
+  background-color: rgba(255,255,255, 0.2); /* Semitransparent white background on hover */
+  border-radius: 10px; /* Rounded corners on hover */
+  padding: 20px; /* Increased padding on hover */  
+}
+
+
+/* Preloader Styles */
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .content_home {
+      background-color: rgba(52, 152, 219, 0.7);
+      box-shadow: 10px 10px 5px lightblue;
+      border: #00bcd4 solid;
+      padding:2%;
+      border-radius: 20px;
+    }
+    .content_home h2{
+      text-shadow:3px 2px 0px 0px lightblue;
+    }
+
+      .sphere {
+        width: 50px;
+        height: 50px;
+        background-color: #00bcd4;
+        border-radius: 50%;
+        margin: 0 10px;
+        animation: moveSpheres 2s infinite alternate; /* Extend animation duration to 4 seconds */
+      }
+
+      .left {
+        animation-delay: 1s; /* Increase the delay for the left sphere */
+      }
+
+      .right {
+        animation-delay: 0s;
+      }
+
+      @keyframes moveSpheres {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(50px);
+        }
+      }
+      /*Preloader CSS ends*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: auto; /* Prevent scrollbars caused by the video */
+  }
+  
+  /* Background Video Styles */
+  #bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1; /* Set the z-index to place the video behind other elements */
+  }
+
+  .container {
+    margin-left: 0;
+    display: flex;
+  }
+/* Logo Styles */
+.logo {
+  text-align: center;
+  padding: 15px;
+  margin-top: 0;
+
+  background-color: #333; /* Background color */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+}
+
+.logo img {
+  max-width: 250px; /* Set maximum width for the logo */
+  transition: transform 0.3s ease-in-out; /* Animation for the logo */
+}
+
+.logo:hover img {
+  transform: scale(1.2); /* Scale the logo on hover */
+}
+
+/* Sidebar Styles */
+
+
+
+.sidebar ul{
+  
+  margin-left: 0%;
+  list-style: none;
+  
+  position:inherit;
+  border-radius: 30px; 
+
+  background-color: rgba(52, 152, 219, 0.7); /* Semitransparent blue background */  
+  color: #fff;
+ padding-top:3%;
+ padding-left: 1%;
+  margin-left: 30px;
+  margin-right: 25px;
+  box-sizing: border-box;
+  height: auto;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+  
+  .sidebar li {
+    margin-left: 0%;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    padding: 15px; /* Added extra padding */
+    transition: background-color 0.3s, color 0.3s, padding 0.3s; /* Added padding to the transition */
+  }
+  
+  .sidebar a:hover {
+    color: #043339;
+    background-color: rgba(255, 255, 255, 0.2); /* Semitransparent white background on hover */
+    border-radius: 10px; /* Rounded corners on hover */
+    padding: 20px; /* Increased padding on hover */
+  }
+  
+  /*CONTENT EDIT HOME*/
+
+  .content {
+    flex: 1;
+    padding: 30px;
+    color: #fcfcfc; /* Change the font color of the content */
+  }
+  .content h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  
+  .content p {
+    font-size: 20px;
+    line-height: 1.8 ;
+    margin-bottom: 20px;
+  }
+
+  /*WELCOME TO THE TECHWORLD */
+  .techworld h2 {
+   background-image: linear-gradient(
+     -225deg,
+     #208bf6 0%,
+     #fafafa 67%,
+     #44107a 29%,
+     #5de79d 67%,
+     #ffa4f0 67%,
+     #b94eb2 80%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+   text-emphasis-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+   font-size: 50px;
+  text-align: center;      }
+ 
+ @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
+ }
+  
+  /* Animation example */
+  .content_home h2 {
+    animation: fadeInUp 5s ease-in-out;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes fadeInUp {
+    from {  
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+/* Additional Content Styles */
+.content h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.content h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+
+
+
+
+.content ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0px;
+}
+
+.content ul li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Image Section Styles */
+.image-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.image-section img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll Indicator Styles */
+.scroll-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Animation for Scroll Indicator */
+.scroll-indicator.reveal {
+  opacity: 1;
+}
+
+/*read more button*/
+#read_more {
+  cursor:pointer;
+  text-decoration: none;
+  padding:10px;
+  margin: 10px;
+  overflow:none;
+  align-content: right;
+  align-self: right;
+  color:white;
+}
+
+.page2 h3 a {
+  color:white;
+  text-decoration: none;
+}
+
+/* ProductList css */
+
+
+h6{
+  font-size: 26px;
+  color: #fff;
+  margin: 0;
+}
+
+button{
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  width: 170px;
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+border-radius: 20px;
+  margin-bottom: 25px;
+}
+button{
+  background: orange;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* product css */
+
+/* body{
+  margin: 0;
+  font-family: sans-serif;
+  background: white;
+}
+h3{
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 10px;
+  
+}
+a{
+  text-decoration: none;
+}
+.gallery{
+  display: flex;
+  width: 1400px;
+
+  justify-content:center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.contents{
+  width: 2000px;
+  margin: 15px;
+
+
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+  box-shadow:  0 14px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+  0 10px 10px rgba(0,0,0,0.22);
+  transition: .4s;
+  background: white;
+}
+.content:hover{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+  0 3px 6px rgba(0,0,0,0.23);
+  transform: translate(0px,-8px);
+}
+img{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+p{
+  text-align: center;
+  color: #b2bec3;
+  padding-top: 0 8px;
+}
+h6{
+  font-size: 26px;
+  text-align: center;
+  color: #222f3e;
+  margin: 0;
+}
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li{
+  padding-top: 5px;
+}
+.star{
+  font-size: 26px;
+  transition: .4s;
+  margin:3px;
+
+}
+.star{
+  color: #ff9f43;
+}
+.star:hover{
+  transform: scale(1,3);
+}
+button{
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+button{
+  background: orange;
+} */

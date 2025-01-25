@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png"/>
+  <!-- MDB -->
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+  rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+  />
+
+  
+
+    <!--- External CSS Google Fonts--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+     <script src="script.js"></script>
+    <!-- MDB -->
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+  ></script>
+  <title>MegaMicro | Repair Manual</title>
+</head>
+<body>
+
+
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="sphere left"></div>
+    <div class="sphere right"></div>
+  </div>
+
+ <!-- Background Video -->
+ <video autoplay muted loop id="bgVideo">
+  <source src="index.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+   <!-- Logo -->
+   <div class="logo">
+    <img src="images/logo.png" alt="Tech Fix Logo">
+  </div>
+  
+
+  <div class="container">
+    <div class="navsidebar">
+    <nav class="sidebar">
+      <ul> 
+        <li><a href="index.html" ><i class="fa fa-fw fa-home"> </i>  Home</a></li>
+        <li><a href="computers.html"><i class="fa fa-fw fa-desktop"> </i>  Computers</a></li>
+        <li><a href="smartphones.html"><i class="fa fa-fw fa-mobile-alt"> </i>  Smartphones</a></li>
+        <li><a href="other_devices.html"><i class="fa fa-fw fa-microchip"> </i>  Other Devices</a></li>
+        <li><a href="software_solutions.html"><i class="fa fa-fw fa-shield"> </i>  Software Solutions</a></li>
+        <li><a href="products_list.html"><i class="fa fa-fw fa-cart-shopping"> </i>  Buy a Product</a></li>
+        <li><a href="http://localhost/MegaMicro/getprice.php/" ><i class="fa fa-fw fa-search"> </i>  Check Product Price</a></li>    
+        <li><a href="converters.html" ><i class="fa fa-fw fa-calculator"> </i>  Converters</a></li>
+        <li></i><a href="contact_us.html" class="active"><i class="fa fa-fw fa-envelope"> </i>  Contact us</a></li>
+        <li> <a href="http://localhost/megamicro/log_index.php/"  class="active"><i class="fa fa-fw fa-user"> </i>  Log Out</a></li>
+  
+      </ul>
+    </nav>
+  </div>
+ <!--Content Starts Here-->
+ <style>
+ /* Create an external CSS file named style.css */
+/* Add some CSS style to the form */
+form {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  background-color:  rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  
+}
+
+input, textarea {
+  width: 80%;
+}
+
+input[type=submit] {
+  margin-top: 10px;
+  width: 20%;
+  border-radius: 20px;
+  border:2px solid white;
+}
+
+/* Add some CSS style to the error messages */
+input:invalid, textarea:invalid {
+ 
+  border-radius: 20px;
+  border:2px solid white;
+}
+
+input:invalid + label::after, textarea:invalid + label::after {
+  content: attr(data-error);
+  color: white;
+  font-weight: bold;
+}
+
+ </style>
+    <script>
+      // Define a function to validate the form
+      function validateForm() {
+        // Get the form element
+        var form = document.getElementById("contact-form");
+        // Get the input elements
+        var name = form.elements["name"];
+        var email = form.elements["email"];
+        var phone = form.elements["phone"];
+        var message = form.elements["message"];
+        // Define a regular expression for the phone number pattern
+        var phoneRegex = /^[0-9]{10}$/;
+        // Define a variable to store the validation status
+        var valid = true;
+        // Check if the name field is empty
+        if (name.value == "") {
+          // Display an error message
+          name.setCustomValidity("Please enter your name");
+          // Set the validation status to false
+          valid = false;
+        } else {
+          // Clear the error message
+          name.setCustomValidity("");
+        }
+        // Check if the email field is empty or invalid
+        if (email.value == "" || !email.checkValidity()) {
+          // Display an error message
+          email.setCustomValidity("Please enter a valid email address");
+          // Set the validation status to false
+          valid = false;
+        } else {
+          // Clear the error message
+          email.setCustomValidity("");
+        }
+        // Check if the phone field is empty or invalid
+        if (phone.value == "" || !phoneRegex.test(phone.value)) {
+          // Display an error message
+          phone.setCustomValidity("Please enter a 10-digit phone number");
+          // Set the validation status to false
+          valid = false;
+        } else {
+          // Clear the error message
+          phone.setCustomValidity("");
+        }
+        // Check if the message field is empty
+        if (message.value == "") {
+          // Display an error message
+          message.setCustomValidity("Please enter your message");
+          // Set the validation status to false
+          valid = false;
+        } else {
+          // Clear the error message
+          message.setCustomValidity("");
+        }
+        // Return the validation status
+        return valid;
+      }
+;
+// Get the form element
+var form = document.getElementById("contact-form");
+
+// Define a function to show an alert
+function showAlert() {
+  // Show a simple alert
+  alert("Thank you for contacting us. We have received your information.");
+}
+
+// Add an event listener to the form submit button
+form.addEventListener("submit", showAlert);
+;
+    </script>
+  
+
+ <div class="content">
+    <div class="page2">
+   <h2 class="active" style="color:antiquewhite">Contact Us</h2>  
+   <div class="contact-form-container">
+          <p style="margin-left: 3em;">fill the following form to contact us.</p>
+        <!-- Add an id attribute to the form element -->
+        <form id="contact-form" action="" method="post" onsubmit="return validateForm()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="10" required></textarea>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+   <!--Content Ends Here-->
+    </div>
+
+  </div>
+
+</body>
+</html>

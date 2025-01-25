@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+
+    <!--- External CSS Google Fonts--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
+
+  <script src="script.js"></script>
+  
+  <title>Tech Fix Website</title>
+</head>
+<body>
+
+
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="sphere left"></div>
+    <div class="sphere right"></div>
+  </div>
+
+ <!-- Background Video -->
+ <video autoplay muted loop id="bgVideo">
+  <source src="index.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+   <!-- Logo -->
+   <div class="logo">
+    <img src="images/logo.png" alt="Tech Fix Logo">
+  </div>
+  
+
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="computers.html">Computers</a></li>
+        <li><a href="smartphones.html">Smartphones</a></li>
+        <li><a href="other_devices.html" class="active">Other Devices</a></li>
+        <li><a href="software_solutions.html">Software Solutions</a></li>
+        <li><a href="number_converter.html" >Convert to Binary</a></li>
+        <li><a href="contact_us.html" >Contact us</a></li>
+      </ul>
+    </nav>
+
+ <!--Content Starts Here-->
+<div class="content">
+  <div class="page3">
+    <h2 class="post_title" style="color:antiquewhite">How to  solve the problem with the USB port in Pendrive 
+    </h2>
+    <hr style="color:black;">
+    <div style="text-align: center; padding-left: 5%; padding-right: 5%; line-height: 2em; margin-bottom: 5%; padding-bottom: 5%; padding-top: 5%;">
+      <article>
+       <!---- PASTE YOUR STEPS CODE HERE ---->
+       <p style="text-align: left;">
+        If you're encountering a file system error on your USB flash drive (pendrive), it could be due to various reasons, such as corruption, improper ejection, or issues with the file system. Here are steps you can take to troubleshoot and resolve the problem:
+        <br>
+        <br>
+        1.<b>Try Another USB Port:</b>
+        
+        Plug the USB flash drive into another USB port on your computer. Sometimes, the issue may be with the USB port itself.
+        <br>
+        <br>
+        2.<b>Use a Different Computer:</b>
+        
+        If possible, try connecting the USB flash drive to a different computer. This helps determine if the issue is with the USB drive or the computer.
+        <br>
+        <br>
+        3.<b>Check for Physical Damage:</b>
+        
+        Inspect the USB flash drive for any physical damage. Damaged connectors or the drive itself may cause issues.
+        <br>
+        <br>
+        4.<b>Run Windows Error Checking (chkdsk):</b>
+        
+        For Windows users, open a Command Prompt with administrator privileges and run the following command:
+        bash
+        Copy code
+        chkdsk /f X:
+        Replace "X:" with the drive letter assigned to your USB flash drive. This command checks and repairs file system errors on the drive.
+        <br>
+        <br>
+        5.<b>Use Disk Utility (Mac):</b>
+        
+        If you are using a Mac, you can use Disk Utility to check and repair the file system. Open Disk Utility, select the USB drive, and choose the "First Aid" option.
+        <br>
+        <br>
+        6.<b>Format the USB Drive:</b>
+        
+        If the above steps don't resolve the issue, you may need to format the USB drive. Keep in mind that formatting erases all data on the drive. You can use tools like Disk Management on Windows or Disk Utility on Mac for this purpose.
+        <br>
+        <br>
+        7.<b>Use DiskPart (Windows):</b>
+        
+        For Windows users, you can use DiskPart, a command-line disk partitioning utility, to clean and format the USB drive. Be cautious as this process will erase all data on the drive.
+        sql
+        Copy code
+        diskpart
+        list disk
+        select disk X    (Replace X with the disk number of your USB drive)
+        clean
+        create partition primary
+        format fs=fat32 quick    (or use ntfs for larger files)
+        assign
+        exit
+        <br>
+        <br>
+        8.<b>Check for Malware or Antivirus Interference:</b>
+        
+        Run a thorough antivirus scan on the USB drive. Sometimes, malware can affect the file system. Additionally, some aggressive antivirus programs may interfere with the functioning of USB drives.
+        <br>
+        <br>
+        9.<b>Use a Data Recovery Tool:</b>
+        
+        If you've formatted the drive and lost data, consider using a data recovery tool to attempt to recover your files before you proceed further.
+        <br>
+        <br>
+        10.<b>Update USB Drivers:</b>        
+        Ensure that your USB drivers are up to date. Outdated drivers can sometimes cause compatibility issues.</p>
+        </article>
+
+    </div>
+
+</div>
+ <!--Content Ends Here-->
+  </div>
+
+
+</body>
+</html>

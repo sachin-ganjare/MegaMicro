@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+
+    <!--- External CSS Google Fonts--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="products_list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+  
+  <title>Tech Fix Website</title>
+</head>
+<body>
+
+
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="sphere left"></div>
+    <div class="sphere right"></div>
+  </div>
+
+ <!-- Background Video -->
+ <video autoplay muted loop id="bgVideo">
+  <source src="index.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+   <!-- Logo -->
+   <div class="logo">
+    <img src="images/logo.png" alt="Tech Fix Logo">
+  </div>
+  
+
+  <div class="container">
+    <div class="navsidebar">
+    <nav class="sidebar">
+      <ul> 
+        <li><a href="index.html" ><i class="fa fa-fw fa-home"> </i>  Home</a></li>
+        <li><a href="computers.html"><i class="fa fa-fw fa-desktop"> </i>  Computers</a></li>
+        <li><a href="smartphones.html"><i class="fa fa-fw fa-mobile-alt"> </i>  Smartphones</a></li>
+        <li><a href="other_devices.html"><i class="fa fa-fw fa-microchip"> </i>  Other Devices</a></li>
+        <li><a href="software_solutions.html"><i class="fa fa-fw fa-shield"> </i>  Software Solutions</a></li>
+        <li><a href="products_list.html"class="active"><i class="fa fa-fw fa-cart-shopping"> </i>  Buy a Product</a></li>
+        <li><a href="http://localhost/MegaMicro/getprice.php/" ><i class="fa fa-fw fa-search"> </i>  Check Product Price</a></li>    
+        <li><a href="converters.html" ><i class="fa fa-fw fa-calculator"> </i>  Converters</a></li>
+        <li></i><a href="contact_us.html" ><i class="fa fa-fw fa-envelope"> </i>  Contact us</a></li>
+        <li> <a href="http://localhost/megamicro/log_index.php/"  class="active"><i class="fa fa-fw fa-user"> </i>  Log Out</a></li>
+  
+      </ul>
+    </nav>
+  </div>
+
+  <!--Content Starts Here-->
+<div class="content">
+    
+    <body class="">
+        
+        <div class="container2">
+            <header>
+                <div class="title">Shopping</div>
+                <div class="icon-cart">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                    </svg>
+                    <span>0</span>
+                </div>
+            </header>
+            <div class="listProduct">
+    
+            </div>
+        </div>
+        <div class="cartTab">
+            <h2><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"></path>
+            </svg> Your Cart<hr></h2>
+            
+            <div class="listCart">
+                
+            </div>
+            <div class="btn">
+                <button class="close">Close</button>
+                <button class="checkOut">Buy</button>
+            </div>
+        </div>
+    
+        <script src="app.js"></script>
+    </body>
+    </html>
+</div>
+</div>
+ 
+</body>
+</html>

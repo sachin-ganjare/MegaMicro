@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png"/>
+  <!-- MDB -->
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+  rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+  />
+
+  
+
+    <!--- External CSS Google Fonts--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+     <script src="script.js"></script>
+    <!-- MDB -->
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+  ></script>
+  <title>MegaMicro | Repair Manual</title>
+</head>
+<body>
+
+
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="sphere left"></div>
+    <div class="sphere right"></div>
+  </div>
+
+ <!-- Background Video -->
+ <video autoplay muted loop id="bgVideo">
+  <source src="index.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+   <!-- Logo -->
+   <div class="logo">
+    <img src="images/logo.png" alt="Tech Fix Logo">
+  </div>
+  
+
+  <div class="container">
+    <div class="navsidebar">
+    <nav class="sidebar">
+      <ul> 
+        <li><a href="#" ><i class="fa fa-fw fa-home"> </i>  Home</a></li>
+        <li><a href="computers.html"><i class="fa fa-fw fa-desktop"> </i>  Computers</a></li>
+        <li><a href="smartphones.html"><i class="fa fa-fw fa-mobile-alt"> </i>  Smartphones</a></li>
+        <li><a href="other_devices.html"><i class="fa fa-fw fa-microchip"> </i>  Other Devices</a></li>
+        <li><a href="software_solutions.html"><i class="fa fa-fw fa-shield"> </i>  Software Solutions</a></li>
+        <li><a href="products_list.html"><i class="fa fa-fw fa-cart-shopping"> </i>  Buy a Product</a></li>
+        <li><a href="http://localhost/MegaMicro/getprice.php/" ><i class="fa fa-fw fa-search"> </i>  Check Product Price</a></li>    
+        <li><a href="converters.html" class="active" ><i class="fa fa-fw fa-calculator"> </i>  Converters</a></li>
+        <li></i><a href="contact_us.html" ><i class="fa fa-fw fa-envelope"> </i>  Contact us</a></li>
+        <li> <a href="http://localhost/megamicro/log_index.php/"  class="active"><i class="fa fa-fw fa-user"> </i>  Log Out</a></li>
+  
+      </ul>
+    </nav>
+  </div>
+ <!--Content Starts Here-->
+ <div class="content">
+    <div class="page2">
+   <h2 class="active" style="color:antiquewhite">Number Converter</h2>  
+
+   <style>
+#input,#from,#to,#result {
+    margin:0.5em;
+    padding: 0.5em;
+    font-size: 1.2em;
+    border-radius: 12px;
+}
+
+button {
+    padding:0.5em 1em;
+    border:none;
+    cursor:pointer;
+    color:white;
+    border-radius: 12px;
+    background-color: rgb(12,12,12,0);
+}
+
+button:hover {
+    background-color: antiquewhite;
+}
+
+   </style>
+   <script>
+    function convert() {
+        var input = document.getElementById('input').value;
+        var from = document.getElementById('from').value;
+        var to = document.getElementById('to').value;
+        var result;
+
+        switch(from) {
+            case 'binary':
+                input = parseInt(input, 2);
+                break;
+            case 'octal':
+                input = parseInt(input, 8);
+                break;
+            case 'decimal':
+                input = parseInt(input, 10);
+                break;
+            case 'hexadecimal':
+                input = parseInt(input, 16);
+                break;
+            default:
+                alert('Invalid input type');
+                return;
+        }
+
+        switch(to) {
+            case 'binary':
+                result = input.toString(2);
+                break;
+            case 'octal':
+                result = input.toString(8);
+                break;
+            case 'decimal':
+                result = input.toString(10);
+                break;
+            case 'hexadecimal':
+                result = input.toString(16);
+                break;
+            default:
+                alert('Invalid output type');
+                return;
+        }
+
+        document.getElementById('result').value = result;
+    }
+</script>
+
+<h2>Convert From:</h2>
+
+<input id="input" type="text" placeholder="Enter a number">
+<select id="from">
+    <option value="binary">Binary</option>
+    <option value="octal">Octal</option>
+    <option value="decimal">Decimal</option>
+    <option value="hexadecimal">Hexadecimal</option>
+</select>
+<hr>
+<h2>Convert To:</h2>
+
+<select id="to">
+    <option value="binary">Binary</option>
+    <option value="octal">Octal</option>
+    <option value="decimal">Decimal</option>
+    <option value="hexadecimal">Hexadecimal</option>
+</select>
+<hr>
+
+<button onclick="convert()">Convert</button>
+<input id="result" type="text" readonly>
+
+   <!--Content Ends Here-->
+    </div>
+
+  </div>
+
+</body>
+</html>

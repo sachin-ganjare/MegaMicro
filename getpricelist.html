@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Price Lookup</title>
+    <script>
+        function getPrice() {
+            var productName = document.getElementById('product_name').value;
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    var response = JSON.parse(this.responseText);
+                    document.getElementById('price').innerHTML = response.price;
+                }
+            };
+            xhr.open("GET", "get_price.php?product_name=" + productName, true);
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Product Price Lookup</h1>
+    <label for="product_name">Product Name:</label>
+    <input type="text" id="product_name" placeholder="Enter product name">
+    <button onclick="getPrice()">Get Price</button>
+    <p>Price: $<span id="price"></span></p>
+</body>
+
+</html>

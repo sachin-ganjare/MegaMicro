@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png"/>
+  <!-- MDB -->
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+  rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+  />
+
+  
+
+    <!--- External CSS Google Fonts--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+     <script src="script.js"></script>
+    <!-- MDB -->
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+  ></script>
+  <title>MegaMicro | Repair Manual</title>
+</head>
+<body>
+
+
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="sphere left"></div>
+    <div class="sphere right"></div>
+  </div>
+
+ <!-- Background Video -->
+ <video autoplay muted loop id="bgVideo">
+  <source src="index.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+   <!-- Logo -->
+   <div class="logo">
+    <img src="images/logo.png" alt="Tech Fix Logo">
+  </div>
+  
+
+  <div class="container">
+    <div class="navsidebar">
+    <nav class="sidebar">
+      <ul> 
+        <li><a href="index.html" ><i class="fa fa-fw fa-home"> </i>  Home</a></li>
+        <li><a href="computers.html" class="active"><i class="fa fa-fw fa-desktop"> </i>  Computers</a></li>
+        <li><a href="smartphones.html"><i class="fa fa-fw fa-mobile-alt"> </i>  Smartphones</a></li>
+        <li><a href="other_devices.html"><i class="fa fa-fw fa-microchip"> </i>  Other Devices</a></li>
+        <li><a href="software_solutions.html"><i class="fa fa-fw fa-shield"> </i>  Software Solutions</a></li>
+        <li><a href="products_list.html"><i class="fa fa-fw fa-cart-shopping"> </i>  Buy a Product</a></li>
+        <li><a href="http://localhost/MegaMicro/getprice.php/" ><i class="fa fa-fw fa-search"> </i>  Check Product Price</a></li>    
+        <li><a href="converters.html" ><i class="fa fa-fw fa-calculator"> </i>  Converters</a></li>
+        <li></i><a href="contact_us.html" ><i class="fa fa-fw fa-envelope"> </i>  Contact us</a></li>
+        <li> <a href="http://localhost/megamicro/log_index.php/"  class="active"><i class="fa fa-fw fa-user"> </i>  Log Out</a></li>
+  
+      </ul>
+    </nav>
+  </div>
+
+
+ <!--Content Starts Here-->
+<div class="content">
+  <div class="page3">
+    <h2 class="post_title" style="color:antiquewhite"> How to solve the problem of Windows Won’t Boot </h2>
+
+    <hr style="color:black;">
+    <div style="text-align: center; padding-left: 5%; padding-right: 5%; line-height: 2em; margin-bottom: 5%; padding-bottom: 5%; padding-top: 5%;">
+      <article>
+       <!---- PASTE YOUR STEPS CODE HERE ---->
+       <p style="text-align: left;">
+        Troubleshooting a Windows computer that won't boot can be a multi-step process. Here are general steps you can take to try and resolve the issue:
+        <br>
+        <br>
+        1.<b>Check for External Devices:</b>
+        
+        Disconnect all external devices (USB drives, external hard drives, printers, etc.) from your computer. Sometimes, these devices can cause boot issues.
+        <br>
+        <br>
+       2.<b> Restart Your Computer:</b>
+        
+        Try restarting your computer. If it's a minor glitch, a simple reboot might solve the problem.
+        <br>
+        <br>
+       3.<b> Boot into Safe Mode:</b>
+        
+        Restart your computer and try to boot into Safe Mode. In Safe Mode, Windows loads only essential drivers. If it boots successfully, it might indicate a driver or software issue.
+        <br>
+        <br>
+        4.<b>Use Last Known Good Configuration:</b>
+        
+        During the boot process, press the F8 key to access the Advanced Boot Options menu. Select "Last Known Good Configuration" and see if your computer boots.
+        <br>
+        <br>
+        5.<b>Perform a System Restore:</b>
+        
+        If you have a system restore point, try restoring your system to a previous state when it was working. This can be done from the Advanced Boot Options menu.
+        <br>
+        <br>
+        6.<b>Check for Disk Errors:</b>
+        
+        Boot from a Windows installation or recovery disk and run the "chkdsk" command to check for and fix disk errors.
+        bash
+        Copy code
+        chkdsk /r
+        <br>
+        <br>
+       7.<b> Run Automatic Repair:</b>
+        
+        Boot from a Windows installation or recovery disk and run the automatic repair tool.
+        <br>
+        <br>
+        8.<b>Use System File Checker (SFC):</b>
+        
+        Boot from a Windows installation or recovery disk and run the System File Checker tool to scan and repair corrupted system files.
+        bash
+        Copy code
+        sfc /scannow
+        <br>
+        <br>
+       9.<b> Check for Malware:</b>
+        
+        Boot from a Windows Defender Offline or another antivirus tool to scan for malware that may be preventing normal boot.
+        <br>
+        <br>
+        10.<b>Rebuild the Boot Configuration Data (BCD):</b>
+        
+        Boot from a Windows installation or recovery disk and run the following commands in the Command Prompt:
+        bash
+        Copy code
+        bootrec /scanos
+        bootrec /rebuildbcd
+        <br>
+        <br>
+        11.<b>Repair Master Boot Record (MBR):</b>
+        
+        Boot from a Windows installation or recovery disk and run the following command in the Command Prompt:
+        bash
+        Copy code
+        bootrec /fixmbr
+        <br>
+        <br>
+        12.<b>Repair Boot Sector:</b>
+        
+        Boot from a Windows installation or recovery disk and run the following command in the Command Prompt:
+        bash
+        Copy code
+        bootrec /fixboot
+        <br>
+        <br>
+        13.<b>Check Hardware:</b>
+        
+        Ensure that all hardware components (RAM, hard drive, etc.) are properly connected. Consider testing with spare components if available.
+        Perform a Clean Windows Install:
+        
+        If all else fails, consider performing a clean installation of Windows. Make sure to back up your important data before doing this.</p>
+        </article>
+
+    </div>
+
+
+</div>
+ <!--Content Ends Here-->
+  </div>
+
+
+</body>
+</html>
